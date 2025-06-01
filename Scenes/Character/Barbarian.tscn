@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv4c5vkqeowk7"]
+
+[ext_resource type="PackedScene" uid="uid://dr10gb56dxhyy" path="res://Assets/Characters/gltf/Barbarian.glb" id="1_jrk68"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1xhwf"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="Barbarian" parent="." instance=ExtResource("1_jrk68")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.27717, 0, 0, 0, 1.20196, 0, 0, 0, 1.35288, 0, 1.21234, 0)
+shape = SubResource("CapsuleShape3D_1xhwf")

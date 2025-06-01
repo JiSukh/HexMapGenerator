@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://csn7g4d3k6ql3"]
+
+[ext_resource type="Script" uid="uid://s7i7iqsy41q" path="res://Scenes/main.gd" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://dxfnuxx4rt717" path="res://TileSet/GridMap.tscn" id="2_idj7w"]
+[ext_resource type="Script" uid="uid://c1grum1i7pyj6" path="res://Scenes/debug_cam.gd" id="2_kln2b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_idj7w"]
+
+[node name="Scene" type="Node3D"]
+script = ExtResource("1_r150o")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.329427, 0.678248, -0.656855, 0, 0.695687, 0.718345, 0.944181, -0.236642, 0.229178, -5.09211, 5.08592, 0.683217)
+
+[node name="GridMap" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_idj7w")]
+player = NodePath("../CharacterBody3D")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("2_kln2b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("SphereShape3D_idj7w")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]

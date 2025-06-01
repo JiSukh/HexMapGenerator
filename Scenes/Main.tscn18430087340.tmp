@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://csn7g4d3k6ql3"]
+
+[ext_resource type="Script" uid="uid://s7i7iqsy41q" path="res://Scenes/main.gd" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://dxfnuxx4rt717" path="res://TileSet/GridMap.tscn" id="2_idj7w"]
+[ext_resource type="Script" uid="uid://c1grum1i7pyj6" path="res://Scenes/debug_cam.gd" id="2_kln2b"]
+[ext_resource type="Script" uid="uid://cabhxj6tutmow" path="res://Scripts/HexWorld.gd" id="3_rgh2o"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_idj7w"]
+
+[node name="Scene" type="Node3D"]
+script = ExtResource("1_r150o")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.329427, 0.678248, -0.656854, 0, 0.695687, 0.718345, 0.944181, -0.236642, 0.229178, -23.9888, 8.22502, 0.683217)
+light_angular_distance = 1.36
+shadow_enabled = true
+
+[node name="GridMap" parent="." instance=ExtResource("2_idj7w")]
+script = ExtResource("3_rgh2o")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 63.1907, 0)
+script = ExtResource("2_kln2b")
+speed = 20.0
+mouse_sensitivity = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("SphereShape3D_idj7w")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+
+[node name="Coordinate" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.595
+anchor_bottom = 0.755
+offset_right = -645.44
+offset_bottom = -449.24
+
+[node name="x" type="RichTextLabel" parent="Coordinate"]
+layout_mode = 0
+offset_right = 191.0
+offset_bottom = 139.0
+fit_content = true

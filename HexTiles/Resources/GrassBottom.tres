@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HexTileData" load_steps=3 format=3 uid="uid://d0k7xs8ixbpia"]
+
+[ext_resource type="PackedScene" uid="uid://bgk1v70sln4ar" path="res://HexTiles/Scenes/GrassBottom.tscn" id="1_rajtl"]
+[ext_resource type="Script" uid="uid://bc6jto7431234" path="res://Scripts/HexTileData.gd" id="1_wjwfe"]
+
+[resource]
+script = ExtResource("1_wjwfe")
+tile_name = "GrassBottom"
+scene = ExtResource("1_rajtl")
+is_water = false
+metadata/_custom_type_script = "uid://bc6jto7431234"

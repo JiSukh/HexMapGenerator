@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HexTileData" load_steps=3 format=3 uid="uid://cl88ev5hjtvvy"]
+
+[ext_resource type="PackedScene" uid="uid://25inbos1pb8d" path="res://HexTiles/Scenes/CoastB.tscn" id="1_elk3h"]
+[ext_resource type="Script" uid="uid://bc6jto7431234" path="res://Scripts/HexTileData.gd" id="2_tg34c"]
+
+[resource]
+script = ExtResource("2_tg34c")
+tile_name = "CoastB"
+scene = ExtResource("1_elk3h")
+is_water = false
+metadata/_custom_type_script = "uid://bc6jto7431234"

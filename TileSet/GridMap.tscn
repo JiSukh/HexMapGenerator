@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxfnuxx4rt717"]
+
+[ext_resource type="Script" uid="uid://dx57mo72gd5ud" path="res://Scenes/hex_script.gd" id="1_0m55o"]
+
+[node name="GridMap" type="Node3D"]
+script = ExtResource("1_0m55o")

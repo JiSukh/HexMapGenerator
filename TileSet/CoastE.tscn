@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccy86y2irm8y7"]
+
+[ext_resource type="PackedScene" uid="uid://bc8755e3syjct" path="res://Assets/tiles/coast/hex_coast_E.gltf" id="1_pmccf"]
+
+[node name="Grass1" instance=ExtResource("1_pmccf")]

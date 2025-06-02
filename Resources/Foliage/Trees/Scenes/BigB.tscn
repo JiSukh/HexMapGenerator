@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5pffgjwtdw2v"]
+
+[ext_resource type="PackedScene" uid="uid://rcpu2evjvvvd" path="res://Assets/decoration/nature/trees_B_large.gltf" id="1_1pug2"]
+
+[node name="Grass1" instance=ExtResource("1_1pug2")]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="HexTileData" load_steps=3 format=3 uid="uid://curo5j0va6moa"]
 
-[ext_resource type="PackedScene" uid="uid://bggstbg56gqa5" path="res://HexTiles/Scenes/CoastD.tscn" id="1_xwtw7"]
-[ext_resource type="Script" uid="uid://bc6jto7431234" path="res://Scripts/HexTileData.gd" id="2_lnujv"]
+[ext_resource type="PackedScene" uid="uid://bggstbg56gqa5" path="res://Resources/HexTiles/Scenes/CoastD.tscn" id="1_xwtw7"]
+[ext_resource type="Script" uid="uid://bc6jto7431234" path="res://Scripts/Tile/HexTileData.gd" id="2_lnujv"]
 
 [resource]
 script = ExtResource("2_lnujv")

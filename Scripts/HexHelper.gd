@@ -17,11 +17,10 @@ static func offset_to_world(col: int, row: int) -> Vector3:
 static func offset_to_world_chunk(col: int, row: int, chunk_size: int) -> Vector3:
 	var chunk_tile_count = chunk_size * 2 + 1
 	
-	# Calculate base position of chunk origin (in world space)
+	# alculate base position of chunk origin (in world space)
 	var x = hex_width * col * chunk_tile_count
 	var z = hex_height * row * chunk_tile_count
 	
-	# Offset odd rows by half hex width (for the chunk row)
 	if (row & 1) == 1:
 		x += hex_width / 2
 	
@@ -40,3 +39,16 @@ static func get_neighbor(coord: Vector2i, direction: int) -> Vector2i:
 	var parity = coord.y & 1
 	var diff = oddr_direction_differences[parity][direction]
 	return Vector2i(coord.x + diff[0], coord.y + diff[1])
+	
+	
+static func world_to_chunk_coord(pos: Vector3, chunk_size: int) -> Vector2i:
+	
+	var row = pos.z / (1.15 * chunk_size)
+
+	var x_adjusted = pos.x
+	if int(row) & 1:
+		x_adjusted -= hex_width / 2
+	
+	var col = x_adjusted / (1.15 * chunk_size)
+	
+	return Vector2i(col, row)

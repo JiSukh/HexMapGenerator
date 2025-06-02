@@ -9,6 +9,11 @@
 [node name="Scene" type="Node3D"]
 script = ExtResource("1_r150o")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.329427, 0.678248, -0.656854, 0, 0.695687, 0.718345, 0.944181, -0.236642, 0.229178, -23.9888, 8.22502, 0.683217)
+light_angular_distance = 1.36
+shadow_enabled = true
+
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 63.1907, 0)
 script = ExtResource("2_kln2b")
@@ -46,14 +51,7 @@ offset_right = 193.0
 offset_bottom = 288.0
 fit_content = true
 
-[node name="TextureRect" type="TextureRect" parent="Coordinate"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Sprite2D" type="Sprite2D" parent="Coordinate"]
 
 [node name="GridMap" type="Node3D" parent="."]
 script = ExtResource("3_rgh2o")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.933624, 0.0735981, 0.350613, -0.342026, 0.474323, 0.811194, -0.106601, -0.877269, 0.468012, 0, 2.06071, 0)
-shadow_enabled = true

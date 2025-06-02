@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed: float = 10.0
+@export var speed: float
 @export var mouse_sensitivity: float = 0.002
 
 var velocity_: Vector3 = Vector3.ZERO
@@ -35,6 +35,9 @@ func _physics_process(delta):
 		input_dir -= transform.basis.x
 	if Input.is_action_pressed("move_right"):
 		input_dir += transform.basis.x
+		
+	if Input.is_action_pressed("escape"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 	# Vertical movement
 	if Input.is_action_pressed("move_up"):
